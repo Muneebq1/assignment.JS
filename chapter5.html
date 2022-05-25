@@ -1,155 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
+
 <body>
     <a href="../assignment.JS/index.html">HOME</a>
     <h1>CHAPTER #5 ASSIGNMENT</h1>
-<br>
-<h2>Q1</h2>
-    <script>
-    let number1 = "10";
-    let number2 = "5";
-    document.write("sum of ", number1)
-    document.write (" and ", number2)
-    result = Number(number1) + Number(number2);
-    document.write(" is ", result);
-</script>
-<br>
-<h2>Q2</h2>
-<script>
-    document.write("sum of ", number1)
-    document.write (" and ", number2)
-    result = Number(number1) - Number(number2);
-    document.write(" is ", result);
-    </script>
     <br>
+    <h2>Q1</h2>
+    <h3>Choose any Number to ADD</h3>
+    <input type="number" id="text1"> <br>
+    <input type="number" id="text2">
+    <button onclick="submit()">submit</button>
+
+    <h1 id="final"></h1>
     <script>
-        document.write("sum of ", number1)
-    document.write (" and ", number2)
-    result = Number(number1) / Number(number2);
-    document.write(" is ", result);
+        function submit() {
+
+            let text1 = document.querySelector("#text1").value;
+            let text2 = document.querySelector("#text2").value;
+            console.log("text1", text1);
+            console.log("text2", text2);
+
+            let result = Number(text1) + Number(text2);
+            console.log("result", result);
+            let final = document.querySelector("#final");
+            final.innerHTML = result;
+        }
     </script>
+
+
     <br>
-     <script>
-        document.write("sum of ", number1)
-    document.write (" and ", number2)
-    result = Number(number1) * Number(number2);
-    document.write(" is ", result);
+    <h2>Q2</h2>
+    <h3>subtraction</h3>
+    <input type="number" id="sub1"> <br>
+    <input type="number" id="sub2">
+    <button onclick="submit2()">submit</button>
+
+    <h2 id="answer"></h2>
+    <script>
+        function submit2() {
+
+            let text3 = document.querySelector("#sub1").value;
+            let text4 = document.querySelector("#sub2").value;
+
+            let result2 = Number(text3) - Number(text4);
+
+            let answer = document.querySelector("#answer");
+            answer.innerHTML = result2;
+        }
+    </script>
+    <h3>Multiplication</h3>
+    <input type="number" id="text5"> <br>
+    <input type="number" id="text6">
+    <button onclick="submit3()">submit</button>
+
+    <h1 id="final2"></h1>
+    <script>
+        function submit3() {
+
+            let text5 = document.querySelector("#text5").value;
+            let text6 = document.querySelector("#text6").value;
+
+            let result3 = Number(text5) * Number(text6);
+
+            let final2 = document.querySelector("#final2");
+            final2.innerHTML = result3;
+        }
+    </script>
+    <h3>Division</h3>
+    <input type="number" id="text7"> <br>
+    <input type="number" id="text8">
+    <button onclick="submit4()">submit</button>
+
+    <h1 id="final3"></h1>
+    <script>
+        function submit4() {
+
+            let text7 = document.querySelector("#text7").value;
+            let text8 = document.querySelector("#text8").value;
+
+
+            let result = Number(text7) / Number(text8);
+            let final3 = document.querySelector("#final3");
+            final3.innerHTML = result;
+        }
     </script>
     <br><br><br>
     <h2>Q3</h2>
+    <input type="text" id="text11">
+
+    <button onclick="submit6()">ADD</button>
+    <p>Initial value</p>
+    <h3 id="final6"></h3>
+    <p>Value after increment </p>
+    <h3 id="final7"></h3>
+    <p>Value after adding: 7</p>
+    <h3 id="final8"></h3>
+    <p>Value after decrement</p>
+    <h3 id="final9"></h3>
+    <p>Reminder</p>
+    <h3 id="final10"></h3>
     <script>
-        let a = ""
-        document.write("Value after variable declaration is:  <br>")
-        a = "5";
-        document.write("Initial value:",a)
-        a++
-        document.write("<br>Value after increment is:",a)
-        sum = Number(a) + Number(7);
-        document.write("<br>Value after addition is:",sum)
-        sum--
-        document.write("<br>Value after decrement is:",sum)
-        b = sum % 3
-        document.write("<br>The reminder is:",b)
+        let a = "0";
+        let b = "1";
+        let c = "7";
+        function submit6() {
+            let text11 = document.querySelector("#text11").value;
+            let result = Number(a) + Number(text11);
+            let final6 = document.querySelector("#final6");
+            final6.innerHTML = result;
+            let result2 = Number(b) + Number(text11);
+            final7.innerHTML = result2;
+            let result3 = Number(c) + Number(result2);
+            final8.innerHTML = result3;
+            let result4 = Number(result3) - Number(b);
+            final9.innerHTML = result4;
+            let result5 = Number(result4) * (0)
+            final10.innerHTML = result5
 
-
+        }
     </script>
     <br><br><br>
     <h2>Q4</h2>
+    <h3>Cost of 1 ticket is: 600</h3>
+
+    <h3>How many do you want?</h3>
+    <input type="text" id="text9">
+
+    <button onclick="submit5()">COST</button>
+
+    <h1 id="final5"></h1>
     <script>
-        let ticketcost = "600";
-        let  buying = "5"
-        document.write("cost to buy 5 tickets is ")
-    result = Number(ticketcost) * Number(buying);
-    document.write( result);
+        let cost = "600";
+        function submit5() {
+            let text9 = document.querySelector("#text9").value;
+            let result = (cost) * (text9);
+            let final5 = document.querySelector("#final5");
 
+            final5.innerHTML = result;
+        }
     </script>
-    <br> <h2>Q5</h2>
-
-    <script>
-
-     document.write("table of 4" ,"<br>","4 x 1 = 4","<br>","4 x 2 = 8","<br>","4 x 3 = 12","<br>","4 x 4 = 16","<br>","4 x 5 = 20","<br>","4 x 6 = 24","<br>","4 x 7 = 28","<br>","4 x 8 = 32","<br>","4 x 9 = 36","<br>","4 x 10 = 40")
-
-    </script>
+<br><br><br>
     <h2>Q7</h2>
     <script>
-        let item1 ="650";
-        let item2 ="100";
-        let quantity1 ="3";
-        let quantity2 ="7";
-        let shipingcharges = "100"
-        sum = Number(item1) * Number(quantity1) ;
-        sum2 = Number(item2) * Number(quantity2);
-        result = Number(sum) + Number(sum2) + Number(shipingcharges)
-        document.write("price of item1 is 650","<br>","Quantity of item1 is 3","<br>","price of item2 is 100","<br>","Quantity of item2 is 7","<br>","shiping charges is 100","<br>","<br>","Total cost of your order is ")
-        document.write (result)
+        let item1 = 650;
+        let item2 = 100;
+        let shoppingcharges = 100;
+
+        input1 = prompt("Enter item1");
+        input2 = prompt("Enter item2");
+
+        result = Number(item1 * input1) + Number(item2 * input2) + Number(shoppingcharges);
+
+        document.write("price of item_1 is: ", (item1), "<br>", "Quantity of item_1 is:  " + input1 + "<br>", "price of item_2 is: ", (item2), "<br>", "Quantity of item_2 is: " + input2 + "<br>", "shoping charges is: ", (shoppingcharges), "<br>", "<br>", "Total cost of your order is: " + result + "");
     </script>
-<br>
-<h2>Q8</h2>
-<h1>MARKSHEET</h1>
-<br><br><br><br>
-<script>
-let total = "980"
-let obtain = "804"
-result = (obtain) / (total) *"100" 
-console.log (result)
-document.write ("Total Marks is 980","<br>","Marks obtain is 804","<br>","percentage is")
-document.write (result)
-document.write("%")
-</script>
-<br>
-<h2>Q9</h2>
-<script>
-    let dollar ="104.80"
-    let riyal = "28"
-    let quantityDollar = "10"
-    let quantityRiyal = "25"
-    sum1 = (dollar) * (quantityDollar)
-    sum2 = (riyal) * (quantityRiyal)
-    result = (sum1) + (sum2)
-    document.write("number of dollars is 10","<br>","number of riyals is 25","<br>","total amount convert in pakistani rupees is")
-    document.write(result)
-</script>
-<br>
-<h2>Q10</h2>
-<script>
-    let number = "10"
-    sum =(number) + "5" * "10" / "2";
-    document.write (sum)
-</script>
-<br>
-<h2>Q11</h2>
-<script>
-    let current = "2022"
-    let birth = "2003"
-    sum =(current) - (birth)
-    document.write("current year = 2022","<br>","birth year = 2003","<br>")
-    document.write(sum)
+    <br><br><br><br>
+    <h2>Q8</h2>
+    <h1>MARKSHEET</h1>
+    <h2>total Marks: 980</h2>
+    <h2>Marks Obtain</h2>
+    <input type="text" id="text12">
 
-</script>
-<br>
-<h2>Q13</h2>
-<script>
-    let snack = "chocolate"
-    let age = "19"
-    let estimate ="50"
-    let quantity ="2"
-    sum =(50)  * (365)
-    console.log (sum)
-    sum2 = (19) * (365)
-    console.log (sum2)
-    resulti1 =(sum)-(sum2)
-    console.log (resulti1)
-    result = (resulti1)* (quantity)
-    document.write ("Favourite Snack: chocolate","<br>","Current age: 19","<br>","Estimated Maximum Age: 50","<br>","Amount of snacks per day: 2","<br>",)
-    document.write("You will need ",(result)," chocolate to last you until the ripe old age of 50")
-</script>
+    <button onclick="submit7()">PERCENTAGE</button>
+    
+    <h2>Percentage</h2>
+    <h2 id="final11"></h2>
 
+    <script>
+        let cost1 = "980";
+        function submit7() {
+            let text12 = document.querySelector("#text12").value;
+            let result = (text12) / (cost1) * (100);
+            let final11 = document.querySelector("#final11");
+
+            final11.innerHTML = result;
+        }
+    </script>
+
+    <br><br><br>
+    <h2>Q9</h2>
+    <h3>Number of Dollars <input type="text" id="text13"></h3>
+    <h3>Number of Riyals <input type="text" id="text14"></h3>
+    <button onclick="sumit8()">SUBMIT</button>
+    <h3 id="final13"></h3>
+    <script>
+        let cost2 = "104.80";
+        let cost3 = "28";
+      function sumit8(){
+       let text13 = document.querySelector("#text13").value;
+       let text14  = document.querySelector("#text14").value;
+       let result = (cost2) * (text13) ;
+       let result2 = (cost3) * (text14);
+       let result3 = (result) + (result2);
+       let final13 = document.querySelector("#final13");
+       final13.innerHTML = result3;
+
+
+
+          
+        }
+    </script>
+    
+    
+    
+    <br>
+
+    <h2>Q10</h2>
+    <script>
+        let number = "10"
+        sum = (number) + "5" * "10" / "2";
+        document.write(sum)
+    </script>
+    <br>
+    <h2>Q11</h2>
+    <script>
+        let current = "2022"
+        let birth = "2003"
+        sum = (current) - (birth)
+        document.write("current year = 2022", "<br>", "birth year = 2003", "<br>")
+        document.write(sum)
+
+    </script>
+    <br>
+    <h2>Q13</h2>
+    <script>
+        let snack = "chocolate"
+        let age = "19"
+        let estimate = "50"
+        let quantity = "2"
+        sum = (50) * (365)
+        console.log(sum)
+        sum2 = (19) * (365)
+        console.log(sum2)
+        resulti1 = (sum) - (sum2)
+        console.log(resulti1)
+        result = (resulti1) * (quantity)
+        document.write("Favourite Snack: chocolate", "<br>", "Current age: 19", "<br>", "Estimated Maximum Age: 50", "<br>", "Amount of snacks per day: 2", "<br>",)
+        document.write("You will need ", (result), " chocolate to last you until the ripe old age of 50")
+    </script>
+
+    <br>
+    <h2>Q5</h2>
+    <script>
+        let num = prompt("enter a number");
+        let i = 5
+        document.write('<table border="3" cellspacing="3"');
+        for (i = 1; i <= 10; i++) {
+            document.write("<tr><td>" + num + "x" + i + "=" + num * i + "</td></tr>");
+
+        }
+    </script>
 
 </body>
+
 </html>
