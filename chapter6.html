@@ -40,19 +40,19 @@
 <h3>English  <input type="number" id="eng"></h3>
 <h3>Urdu <input type="number" id="urdu"></h3>
 <h3>Maths <input type="number" id="maths"> </h3>
-<h3 id="final"></h3>
 <button onclick="submit()">PERCENTAGE</button>
+<h3 id="final"></h3>
 <script>
     let marks = 100
         function submit(){
-            let english = document.querySelector("#eng").value
-            let urdu = document.querySelector("#urdu").value
-            let maths = document.querySelector("#maths").value
+            let eng = document.querySelector("#eng").value;
+            let urdu = document.querySelector("#urdu").value;
+            let maths = document.querySelector("#maths").value;
             let result = Number(eng) + Number(urdu) + Number(maths);
             let result2 = Number(result) / (300)
             let result3 = Number(result2) * (100)
             let final = document.querySelector("#final")
-            final.innerHTML = result3
+            final.innerHTML = result3;
 
             
         }
