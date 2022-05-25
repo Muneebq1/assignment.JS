@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
 
 <body>
@@ -147,7 +147,7 @@
             final5.innerHTML = result;
         }
     </script>
-<br><br><br>
+    <br><br><br>
     <h2>Q7</h2>
     <script>
         let item1 = 650;
@@ -169,7 +169,7 @@
     <input type="text" id="text12">
 
     <button onclick="submit7()">PERCENTAGE</button>
-    
+
     <h2>Percentage</h2>
     <h2 id="final11"></h2>
 
@@ -194,23 +194,23 @@
     <script>
         let cost2 = "104.80";
         let cost3 = "28";
-      function sumit8(){
-       let text13 = document.querySelector("#text13").value;
-       let text14  = document.querySelector("#text14").value;
-       let result = (cost2) * (text13) ;
-       let result2 = (cost3) * (text14);
-       let result3 = (result) + (result2);
-       let final13 = document.querySelector("#final13");
-       final13.innerHTML = result3;
+        function sumit8() {
+            let text13 = document.querySelector("#text13").value;
+            let text14 = document.querySelector("#text14").value;
+            let result = (cost2) * (text13);
+            let result2 = (cost3) * (text14);
+            let result3 = (result) + (result2);
+            let final13 = document.querySelector("#final13");
+            final13.innerHTML = result3;
 
 
 
-          
+
         }
     </script>
-    
-    
-    
+
+
+
     <br>
 
     <h2>Q10</h2>
@@ -218,22 +218,22 @@
     <button onclick="submit9()">ADD</button>
     <h3>Adding 5</h3>
     <h3 id="adding"></h3>
-    <h3>Multiply  by 10</h3>
+    <h3>Multiply by 10</h3>
     <h3 id="multiply"></h3>
     <h3>divided by 2</h3>
     <h3 id="divide"></h3>
     <script>
-        function submit9(){
-        let text15 = document.querySelector("#text15").value
-        let result = Number(text15) + Number(5);
-        let adding = document.querySelector("#adding")
-        adding.innerHTML= result
-        let result2 = (result) * (10)
-        let multiply = document.querySelector("#multiply")
-        multiply.innerHTML = result2
-        let result3 = (result2) / (2)
-        let divide = document.querySelector("#divide")
-        divide.innerHTML= result3;
+        function submit9() {
+            let text15 = document.querySelector("#text15").value
+            let result = Number(text15) + Number(5);
+            let adding = document.querySelector("#adding")
+            adding.innerHTML = result
+            let result2 = (result) * (10)
+            let multiply = document.querySelector("#multiply")
+            multiply.innerHTML = result2
+            let result3 = (result2) / (2)
+            let divide = document.querySelector("#divide")
+            divide.innerHTML = result3;
         }
     </script>
     <br>
@@ -242,9 +242,9 @@
     <h3>BirthYear
         <input type="number" id="age"> <br>
     </h3>
-    
+
     <button onclick="submit8()">submit</button>
-<h3>Your Age is</h3>
+    <h3>Your Age is</h3>
     <h3 id="final14"></h3>
     <script>
         function submit8() {
@@ -270,19 +270,19 @@
 
     <h3 id="final15"></h3>
     <script>
-        function submit10(){
+        function submit10() {
             let snacks = document.querySelector("#snacks").value;
             let currentage = document.querySelector("#currentage").value;
             let maxage = document.querySelector("#max").value;
             let amount = document.querySelector("#amount").value;
 
-         let result = (currentage) * (365);
-         let result2 = (maxage) * (365);
-         let result3 = (result2)- (result);
-         let result4 = (result3) * (amount)
-         let final15 = document.querySelector("#final15");
-         final15.innerHTML = result4;
-         document.write = "you will need",(amount),(snack)," to last you until tge ripe old age of ",(maxage)
+            let result = (currentage) * (365);
+            let result2 = (maxage) * (365);
+            let result3 = (result2) - (result);
+            let result4 = (result3) * (amount)
+            let final15 = document.querySelector("#final15");
+            final15.innerHTML = result4;
+            document.write = "you will need", (amount), (snack), " to last you until tge ripe old age of ", (maxage)
         }
     </script>
 
