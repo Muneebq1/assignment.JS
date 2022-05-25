@@ -189,6 +189,7 @@
     <h3>Number of Dollars <input type="text" id="text13"></h3>
     <h3>Number of Riyals <input type="text" id="text14"></h3>
     <button onclick="sumit8()">SUBMIT</button>
+    <h3>Total Currency in PKR: </h3>
     <h3 id="final13"></h3>
     <script>
         let cost2 = "104.80";
@@ -220,12 +221,26 @@
     </script>
     <br>
     <h2>Q11</h2>
+    <h3>Current year <input type="text" id="year"></h3>
+    <h3>BirthYear
+        <input type="number" id="age"> <br>
+    </h3>
+    
+    <button onclick="submit8()">submit</button>
+<h3>Yur Age is</h3>
+    <h3 id="final14"></h3>
     <script>
-        let current = "2022"
-        let birth = "2003"
-        sum = (current) - (birth)
-        document.write("current year = 2022", "<br>", "birth year = 2003", "<br>")
-        document.write(sum)
+        function submit8() {
+
+            let text3 = document.querySelector("#year").value;
+            let text4 = document.querySelector("#age").value;
+
+            let result = Number(text3) - Number(text4);
+
+            let final14 = document.querySelector("#final14");
+            final14.innerHTML = result;
+        }
+    </script>
 
     </script>
     <br>
