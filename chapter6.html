@@ -28,34 +28,35 @@
         a--
         document.write("Now the value of a is:",(a),"<br>","<br>")
     </script>
-    <br>
-    <h2>Q2</h2>
-    <script>
-        let c ="2";
-        let b ="1";
-        result = (--c) - (--b) + (++b) + (b--);
-        document.write("a is: 2","<br>","b is: 1","<br>",)
-        document.write("result is:",(result) )
-    </script>
+
     <br>
     <script>
        let username =prompt("what is your username","Muneeb");
-       alert ("Hello","",username)
-    
+       alert (username) 
     </script>
     <br>
     <h2>Q6</h2>
-    <script>
-        let english = 54
-        let math = 54
-        let urdu = 48
-        let marks = 100
-        per = (english) / (marks) * (100)
-        percentage = (urdu) / (marks) * (100)
-        document.write("Subject "," Total Marks "," Marks Obtained "," Percentage<br>")
-        document.write("English: ",marks,"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ", english," &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp",per,"%")
-        document.write("<br>Maths:&nbsp &nbsp",marks,"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ", math," &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp",per,"%" )
-        document.write("<br>Urdu:&nbsp &nbsp &nbsp",marks,"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ", urdu," &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp",percentage,"%" )
+    <h3>Total Marks for all subjects is: 100</h3>
+<h3>English  <input type="number" id="eng"></h3>
+<h3>Urdu <input type="number" id="urdu"></h3>
+<h3>Maths <input type="number" id="maths"> </h3>
+<h3 id="final"></h3>
+<button onclick="submit()">PERCENTAGE</button>
+<script>
+    let marks = 100
+        function submit(){
+            let english = document.querySelector("#eng").value
+            let urdu = document.querySelector("#urdu").value
+            let maths = document.querySelector("#maths").value
+            let result = Number(eng) + Number(urdu) + Number(maths);
+            let result2 = Number(result) / (300)
+            let result3 = Number(result2) * (100)
+            let final = document.querySelector("#final")
+            final.innerHTML = result3
+
+            
+        }
+       
     </script>
     <br>
     <h2>Q5</h2>

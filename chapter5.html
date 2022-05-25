@@ -214,10 +214,27 @@
     <br>
 
     <h2>Q10</h2>
+    <input type="text" id="text15">
+    <button onclick="submit9()">ADD</button>
+    <h3>Adding 5</h3>
+    <h3 id="adding"></h3>
+    <h3>Multiply  by 10</h3>
+    <h3 id="multiply"></h3>
+    <h3>divided by 2</h3>
+    <h3 id="divide"></h3>
     <script>
-        let number = "10"
-        sum = (number) + "5" * "10" / "2";
-        document.write(sum)
+        function submit9(){
+        let text15 = document.querySelector("#text15").value
+        let result = Number(text15) + Number(5);
+        let adding = document.querySelector("#adding")
+        adding.innerHTML= result
+        let result2 = (result) * (10)
+        let multiply = document.querySelector("#multiply")
+        multiply.innerHTML = result2
+        let result3 = (result2) / (2)
+        let divide = document.querySelector("#divide")
+        divide.innerHTML= result3;
+        }
     </script>
     <br>
     <h2>Q11</h2>
@@ -227,7 +244,7 @@
     </h3>
     
     <button onclick="submit8()">submit</button>
-<h3>Yur Age is</h3>
+<h3>Your Age is</h3>
     <h3 id="final14"></h3>
     <script>
         function submit8() {
@@ -245,20 +262,28 @@
     </script>
     <br>
     <h2>Q13</h2>
+    <h3>Fvourite snack <input type="text" id="snacks"></h3>
+    <h3>Current Age <input type="text" id="currentage"> </h3>
+    <h3>MAximum Age <input type="text" id="max"> </h3>
+    <h3>Amount of Snacks per day <input type="text" id="amount"></h3>
+    <button onclick="submit10()">submit</button>
+
+    <h3 id="final15"></h3>
     <script>
-        let snack = "chocolate"
-        let age = "19"
-        let estimate = "50"
-        let quantity = "2"
-        sum = (50) * (365)
-        console.log(sum)
-        sum2 = (19) * (365)
-        console.log(sum2)
-        resulti1 = (sum) - (sum2)
-        console.log(resulti1)
-        result = (resulti1) * (quantity)
-        document.write("Favourite Snack: chocolate", "<br>", "Current age: 19", "<br>", "Estimated Maximum Age: 50", "<br>", "Amount of snacks per day: 2", "<br>",)
-        document.write("You will need ", (result), " chocolate to last you until the ripe old age of 50")
+        function submit10(){
+            let snacks = document.querySelector("#snacks").value;
+            let currentage = document.querySelector("#currentage").value;
+            let maxage = document.querySelector("#max").value;
+            let amount = document.querySelector("#amount").value;
+
+         let result = (currentage) * (365);
+         let result2 = (maxage) * (365);
+         let result3 = (result2)- (result);
+         let result4 = (result3) * (amount)
+         let final15 = document.querySelector("#final15");
+         final15.innerHTML = result4;
+         document.write = "you will need",(amount),(snack)," to last you until tge ripe old age of ",(maxage)
+        }
     </script>
 
     <br>
